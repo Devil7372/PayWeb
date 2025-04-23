@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>International Payment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" type="assents/DypixxTECH.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');body {font-family: 'Poppins', sans-serif;user-select: none}img {pointer-events: none}.payment-method {transition: all 0.3s ease}.payment-method:hover {transform: translateY(-3px)}</style>
+  <script>document.addEventListener('contextmenu', event => event.preventDefault());</script>
+</head>
+<body
+  class="bg-gradient-to-br from-indigo-500 to-slate-800 min-h-screen flex items-center justify-center px-4 relative">
+  <div id="toast"
+    class="hidden fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white shadow-lg px-5 py-3 rounded-xl text-sm font-medium z-50 transition duration-300">
+  </div>
+  <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 space-y-6 text-center">
+    <h4 class="text-3xl font-bold text-slate-800">PayWeb | <span class="text-indigo-600">Dypixx</span></h4>
+    <p class="text-slate-400"><i class="fa fa-lock"></i> Protected Payment Page</p>
+    <div class="space-y-4 mt-6">
+
+      <!-- Paypal -->
+      <div class="payment-method bg-slate-50 p-3 rounded-lg border border-slate-200">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <i class="fab fa-paypal text-2xl text-blue-500"></i>
+            <span class="font-semibold text-slate-700">Paypal</span>
+          </div>
+          <button onclick="copyPaymentAddress('paypal')"
+            class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded hover:bg-blue-200">
+            <i class="fas fa-external-link-alt"></i>
+            Open
+          </button>
+        </div>
+        <div class="mt-2 text-left text-xs text-slate-500 break-all" id="paypal-address"></div>
+      </div>
+
+      <!-- Binance Pay -->
+      <div class="payment-method bg-slate-50 p-3 rounded-lg border border-slate-200">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-qrcode text-2xl text-yellow-500"></i>
+            <span class="font-semibold text-slate-700">Binance Pay</span>
+          </div>
+          <button onclick="copyPaymentAddress('binance')"
+            class="text-xs bg-yellow-100 text-yellow-600 px-2 py-1 rounded hover:bg-yellow-200">
+            <i class="fa-solid fa-copy"></i>
+            Copy
+          </button>
+        </div>
+        <div class="mt-2 text-left text-xs text-slate-500 break-all" id="binance-address"></div>
+      </div>
+
+      <!-- Buy me a coffee -->
+      <div class="payment-method bg-slate-50 p-3 rounded-lg border border-slate-200">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-coffee text-2xl text-purple-500"></i>
+            <span class="font-semibold text-slate-700">
+              Buy me a coffee</span>
+          </div>
+          <button onclick="copyPaymentAddress('coffee')"
+            class="text-xs bg-purple-100 text-purple-600 px-2 py-1 rounded hover:bg-purple-200">
+            <i class="fas fa-external-link-alt"></i>
+            Open
+          </button>
+        </div>
+        <div class="mt-2 text-left text-xs text-slate-500 break-all" id="coffee-address"></div>
+      </div>
+
+    </div>
+    <div class="grid grid-cols-1 gap-3 mt-6">
+      <a href="#" id="contact-link"
+        class="block bg-blue-500 text-white font-semibold py-2 rounded-xl shadow-lg hover:bg-blue-600 transition">
+        <i class="fas fa-comment-dots"></i>
+        Contact
+      </a>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
