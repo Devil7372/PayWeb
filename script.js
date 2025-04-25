@@ -27,7 +27,7 @@ function handleDownload() {
 function handlePay() {
     showToast("Opening UPI app(s)");
     setTimeout(() => {
-        window.location.href = "upi://pay?pa=ideepbanik@ybl&pn=Deep%20Banik&mc=0000&mode=02&purpose=00"; // Replace upi id and name keep the format same
+        window.location.href = "upi://pay?pa=prashant90@fam&pn=PRASHANT%20MAROTHIA&mc=0000&mode=02&purpose=00"; // Replace upi id and name keep the format same
     }, 3000);
 }
 
@@ -40,7 +40,7 @@ const paymentAddresses = {
     coffee: 'https://buymeacoffee.com/example' // Update Buy me coffe value
 };
 
-const ContactLink = 'https://t.me/dypixx'; // Update Contact-Link value
+const ContactLink = 'https://t.me/xaepm01'; // Update Contact-Link value
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('paypal-address').textContent = paymentAddresses.paypal;
